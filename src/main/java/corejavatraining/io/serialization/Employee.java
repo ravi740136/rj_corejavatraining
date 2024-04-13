@@ -1,15 +1,21 @@
 package corejavatraining.io.serialization;
 
-import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
 import java.io.Serializable;
 
+
+/*
+ *This class uses defult implementation 
+ *and does not use custom serialization methods 
+ *readObject and writeObject
+ * 
+ */
 public class Employee implements Serializable {
 
 	private static final long serialVersionUID = 1L;
-
-	private transient Address address; // not an serializable object
+  
+	// both serializable objects with 
+	// default implementation, non transient
+	private Address address; 
 	private Person person;
 
 	public Address getAddress() {
@@ -27,18 +33,4 @@ public class Employee implements Serializable {
 	public void setPerson(Person person) {
 		this.person = person;
 	}
-
-	private void writeObject(ObjectOutputStream oos) throws IOException {
-		oos.defaultWriteObject();
-		oos.writeObject(address.getHouseNumber());
-	}
-
-	private void readObject(ObjectInputStream ois) throws ClassNotFoundException, IOException {
-		ois.defaultReadObject();
-		Integer houseNumber = (Integer) ois.readObject();
-		Address a = new Address();
-		a.setHouseNumber(houseNumber);
-		this.setAddress(a) ;
-	}
-
 }

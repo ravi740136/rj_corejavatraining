@@ -2,12 +2,10 @@ package corejavatraining.io.serialization;
 
 import java.io.Serializable;
 
-public class Address implements Serializable{
+public class AddressNS {
+//implements Serializable{
 	
-	//uses default seralization, we do not implement
-	//readObject and writeObject methods
-	
-	private static final long serialVersionUID = 1L;
+	//private static final long serialVersionUID = 1L;
 
 	private int houseNumber;
 

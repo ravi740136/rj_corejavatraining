@@ -16,10 +16,10 @@ public class CustomSerializationTest {
 		p.setAge(25);
 		p.setName("rahul");
 		
-		Address a =  new Address();
+		AddressNS a =  new AddressNS();
 		a.setHouseNumber(1);
 		
-		Employee e = new Employee();
+		EmployeeCustomSerial e = new EmployeeCustomSerial();
 		e.setPerson(p);
 		e.setAddress(a);
 		
@@ -31,7 +31,9 @@ public class CustomSerializationTest {
 	    
 	    FileInputStream fi = new FileInputStream("src/test/resources/output.txt");
 	    ObjectInputStream oi = new ObjectInputStream(fi);
-	    Employee e1 = (Employee)oi.readObject();
+	    EmployeeCustomSerial e1 = (EmployeeCustomSerial)oi.readObject();
+	    oi.close();
+	    
 	    System.out.println(e1.getPerson().getAge());
 	    System.out.println(e1.getAddress().getHouseNumber());
 	    

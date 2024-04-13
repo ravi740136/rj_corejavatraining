@@ -3,9 +3,8 @@ import java.io.Serializable;
 
 public class Person implements Serializable {
 
-	/**
-	 * 
-	 */
+	//uses default seralization, we do not implement
+	//readObject and writeObject methods
 	private static final long serialVersionUID = 1L;
 
 	private int age;
