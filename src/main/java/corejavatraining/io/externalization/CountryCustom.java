@@ -7,6 +7,7 @@ import java.io.ObjectInput;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutput;
 import java.io.ObjectOutputStream;
+import java.io.Serializable;
 
 public class CountryCustom implements Externalizable {
 	
@@ -53,12 +54,18 @@ public class CountryCustom implements Externalizable {
 		this.code = in.readInt();
 	}
 	
-	private void writeObject(ObjectOutputStream oos) throws IOException {
-
+	//following custom serialization methods are invoked only if 
+	//the class extends serializable, they do not get invoked if 
+	//the class extends externalizable
+	private void writeObject(ObjectOutputStream oos) throws IOException {    
+		oos.defaultWriteObject();
+		System.out.println("using custom write--");
 	}
 	
-	private void readObject(ObjectInputStream ois) {
+	private void readObject(ObjectInputStream ois) throws ClassNotFoundException, IOException {
 		
+		ois.defaultReadObject();
+		System.out.println("using custom read ..");
 	}
 	
 	@Override
