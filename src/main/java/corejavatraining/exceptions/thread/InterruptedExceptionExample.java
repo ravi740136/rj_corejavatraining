@@ -14,7 +14,7 @@ class MyThread extends Thread {
 		try {
 			Thread.sleep(3000l);
 			System.out.println("Thread finished");
-		} catch (Exception ie) {
+		} catch (InterruptedException ie) {
 			System.out.println("printing exception...");
 			ie.printStackTrace();
 		}
