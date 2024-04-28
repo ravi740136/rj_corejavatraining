@@ -14,14 +14,15 @@ public abstract class BaseFileReader {
 	public BaseFileReader(String filepath){
 		this.filepath = filepath;
 	}
+	
 	public List<String> readFile() throws URISyntaxException, IOException {
 		// TODO Auto-generated method stub
 		Path p = Paths.get(getClass().getClassLoader().getResource(filepath)
 				.toURI());
 		System.out.println("path "+p);
-		return Files.lines(p).map(this::processLines).collect(Collectors.toList());
-		
+		return Files.lines(p).map(this::processLines).collect(Collectors.toList());	
 	}
+	
 	protected abstract String processLines(String s);
 
 }

@@ -8,6 +8,10 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import org.testng.annotations.Test;
 
+import rj.corejavatraining.io.serialization.Address;
+import rj.corejavatraining.io.serialization.Employee;
+import rj.corejavatraining.io.serialization.Person;
+
 public class DefaultSerializationTest {
 	@Test
 	public void test_Default_Serialization_With_no_transient_fields() throws IOException, ClassNotFoundException {

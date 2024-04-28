@@ -9,8 +9,8 @@ import java.io.ObjectOutputStream;
 
 import org.testng.annotations.Test;
 
-import corejavatraining.io.externalization.Country;
-import corejavatraining.io.externalization.CountryCustom;
+import rj.corejavatraining.io.externalization.Country;
+import rj.corejavatraining.io.externalization.CountryCustom;
 
 public class ExternalizationTest {
 

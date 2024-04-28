@@ -1,4 +1,4 @@
-package corejavatraining.io;
+package rj.corejavatraining.io;
 
 import java.nio.file.Files;
 import java.nio.file.Path;

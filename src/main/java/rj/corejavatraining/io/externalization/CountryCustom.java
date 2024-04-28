@@ -1,13 +1,15 @@
-package corejavatraining.io.externalization;
+package rj.corejavatraining.io.externalization;
 
 import java.io.Externalizable;
 import java.io.File;
 import java.io.IOException;
 import java.io.ObjectInput;
+import java.io.ObjectInputStream;
 import java.io.ObjectOutput;
 import java.io.ObjectOutputStream;
+import java.io.Serializable;
 
-public class Country implements Externalizable {
+public class CountryCustom implements Externalizable {
 	
 	
 	private int code;
@@ -50,6 +52,20 @@ public class Country implements Externalizable {
 		this.name = in.readUTF();
 		this.capital = in.readUTF();
 		this.code = in.readInt();
+	}
+	
+	//following custom serialization methods are invoked only if 
+	//the class extends serializable, they do not get invoked if 
+	//the class extends externalizable
+	private void writeObject(ObjectOutputStream oos) throws IOException {    
+		oos.defaultWriteObject();
+		System.out.println("using custom write--");
+	}
+	
+	private void readObject(ObjectInputStream ois) throws ClassNotFoundException, IOException {
+		
+		ois.defaultReadObject();
+		System.out.println("using custom read ..");
 	}
 	
 	@Override

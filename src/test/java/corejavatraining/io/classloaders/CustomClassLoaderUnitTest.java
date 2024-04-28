@@ -8,6 +8,10 @@ import java.net.URL;
 import java.net.URLClassLoader;
 import org.testng.annotations.Test;
 
+import rj.corejavatraining.io.classloaders.CustomClassLoaderFI;
+import rj.corejavatraining.io.classloaders.CustomClassLoaderRS;
+import rj.corejavatraining.io.classloaders.PrintClassLoader;
+
 public class CustomClassLoaderUnitTest {
 
     @Test

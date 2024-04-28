@@ -1,4 +1,4 @@
-package corejavatraining.io.serialization;
+package rj.corejavatraining.io.serialization;
 
 import java.io.Serializable;
 

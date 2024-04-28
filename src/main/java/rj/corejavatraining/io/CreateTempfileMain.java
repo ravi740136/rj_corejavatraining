@@ -1,4 +1,4 @@
-package corejavatraining.io;
+package rj.corejavatraining.io;
 
 import java.io.IOException;
 import java.nio.file.Files;

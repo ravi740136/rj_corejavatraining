@@ -1,4 +1,4 @@
-package corejavatraining.io.classloaders;
+package rj.corejavatraining.io.classloaders;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;

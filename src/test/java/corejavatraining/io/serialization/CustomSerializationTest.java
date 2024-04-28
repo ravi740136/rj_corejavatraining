@@ -8,6 +8,10 @@ import java.io.ObjectOutputStream;
 
 import org.testng.annotations.Test;
 
+import rj.corejavatraining.io.serialization.AddressNS;
+import rj.corejavatraining.io.serialization.EmployeeCustomSerial;
+import rj.corejavatraining.io.serialization.Person;
+
 public class CustomSerializationTest {
 
 	@Test
